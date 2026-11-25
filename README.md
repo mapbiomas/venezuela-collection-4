@@ -29,6 +29,8 @@ venezuela-collection-4/
 
 MapBiomas Venezuela Collection 4 maps are generated using machine learning in Google Earth Engine through pixel-by-pixel classification of Landsat imagery at 30 m resolution. The time series covers **1985 to 2025** (41 annual bands), organized by classification regions across the national territory.
 
+<img src="./coverage.webp" alt="Land cover and land use map of Venezuela from MapBiomas Collection 4" width="100%">
+
 ## Methodological Steps
 
 | Script | Description | Documentation |
