@@ -1,12 +1,12 @@
 ![MapBiomas Venezuela](../mapbiomas-venezuela.png)
 
-[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Back to README](https://img.shields.io/badge/%E2%86%90%20Back%20to%20README-gray?style=for-the-badge)](../README.md)
+[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Back to README](https://img.shields.io/badge/%E2%86%90%20Back%20to%20README-gray?style=for-the-badge)](../#readme)
 
 # MapBiomas Venezuela
 
 _**Land Use and Land Cover Classification Module — Collection 4**_
 
-[View script (`03-4-temporal-filter.js`)](../03-4-temporal-filter.js) · [Versión en español](./03-4-temporal-filter.md)
+[View script (`03-4-temporal-filter.js`)](./03-4-temporal-filter.js) · [Versión en español](./es/#readme)
 
 # Temporal Filter User Manual
 
@@ -37,7 +37,7 @@ This filter corrects one- to three-year interruptions in a pixel's classificatio
 - Access to `users/ejvalero/api:src/utils`, the `users/mapbiomas/modules:Palettes.js` module with the `classification9` palette, and the `projects/mapbiomas-venezuela/assets/DATOS-AUXILIARES/VECTORES/ve-gu-regiones-clasificacion` asset, which identifies regions by `gridcode`.
 - Access to the Venezuela and Guyana Landsat mosaics. For the preview, the script combines the `full` season mosaics and shows `swir1_median`, `nir_median`, and `red_median` with the region mask. It applies a special filter to the Venezuela collection for the configured Andean regions. The temporal rules operate on the classification.
 
-Input and output share `projects/<user>/assets/MAPBIOMAS-VENEZUELA/LANDSAT/COLLECTION4/GENERAL/classification-ft`. To use the [Spatial Filter](./03-3-spatial-filter.en.md) result, set `input_version` to the version actually exported and choose a different, available `output_version`. Both scripts' example settings point to the same output name.
+Input and output share `projects/<user>/assets/MAPBIOMAS-VENEZUELA/LANDSAT/COLLECTION4/GENERAL/classification-ft`. To use the [Spatial Filter](../03-3-spatial-filter/#readme) result, set `input_version` to the version actually exported and choose a different, available `output_version`. Both scripts' example settings point to the same output name.
 
 ## 2. Parameters
 
@@ -73,7 +73,7 @@ Each rule processes `[6, 9, 11, 13, 21, 24, 30, 3, 12, 33]` in that order. Each 
 For a given class and interior rule, the years are evaluated in parallel against the same input for that pass. `pad_image()` adds three temporary bands of value `9999` before and after the series so the windows can select bands beyond the endpoints. The output omits the temporary bands. The edge rules update the first or last band directly.
 
 > [!NOTE]
-> The windows replace class values that match a pattern. The code does not apply the [Gap Fill](./03-2-gapfill.en.md) NoData mask or call `unmask()`. An unmasked band value of `27` can match an `X` position. `where()` leaves an already masked input pixel masked.
+> The windows replace class values that match a pattern. The code does not apply the [Gap Fill](../03-2-gapfill/#readme) NoData mask or call `unmask()`. An unmasked band value of `27` can match an `X` position. `where()` leaves an already masked input pixel masked.
 
 ## 4. Restoring years and classes
 
@@ -144,4 +144,4 @@ The task exports the final classification. To audit differences or class areas b
 
 - [Conditional replacement with `where()`](https://developers.google.com/earth-engine/apidocs/ee-image-where) · [Overwriting bands with `addBands()`](https://developers.google.com/earth-engine/apidocs/ee-image-addbands) · [Overlay with `blend()`](https://developers.google.com/earth-engine/apidocs/ee-image-blend)
 - [Exporting to assets](https://developers.google.com/earth-engine/apidocs/export-image-toasset) · [Pyramiding policy](https://developers.google.com/earth-engine/guides/image_upload)
-- [Next workflow guide: Frequency Filter](./03-5-frequency-filter.en.md)
+- [Next workflow guide: Frequency Filter](../03-5-frequency-filter/#readme)

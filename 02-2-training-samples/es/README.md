@@ -1,12 +1,12 @@
-![MapBiomas Venezuela](../mapbiomas-venezuela.png)
+![MapBiomas Venezuela](../../mapbiomas-venezuela.png)
 
-[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Volver al README](https://img.shields.io/badge/%E2%86%90%20Volver%20al%20README-gray?style=for-the-badge)](../README.md)
+[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Volver al README](https://img.shields.io/badge/%E2%86%90%20Volver%20al%20README-gray?style=for-the-badge)](../../#readme)
 
 # MapBiomas Venezuela
 
 _**Land Use and Land Cover Classification Module — Collection 4**_
 
-[Ver script (`02-2-training-samples.js`)](../02-2-training-samples.js) · [English version](./02-2-training-samples.en.md)
+[Ver script (`02-2-training-samples.js`)](../02-2-training-samples.js) · [English version](../#readme)
 
 # Manual de usuario: Generación de muestras de entrenamiento anuales
 
@@ -415,7 +415,7 @@ La paleta base `classification8` (índices 0–62) se extiende mediante `extend_
 ### Coherencia temporal y con el clasificador
 
 - El mosaico corresponde al año procesado; la referencia también, salvo en 2025 (que toma 2024).
-- Confirme que las propiedades exportadas coinciden con el `feature_space` esperado por [`03-0-classifier.js`](../03-0-classifier.js) (note que `02-2-training-samples.js` incluye `tir_median` y `03-0-classifier.js` usa 34 bandas sin `tir_median`, lo cual es compatible mientras las muestras contengan todas las bandas del clasificador).
+- Confirme que las propiedades exportadas coinciden con el `feature_space` esperado por [`03-0-classifier.js`](../../03-0-classifier/03-0-classifier.js) (note que `02-2-training-samples.js` incluye `tir_median` y `03-0-classifier.js` usa 34 bandas sin `tir_median`, lo cual es compatible mientras las muestras contengan todas las bandas del clasificador).
 
 ---
 

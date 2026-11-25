@@ -1,12 +1,12 @@
 ![MapBiomas Venezuela](../mapbiomas-venezuela.png)
 
-[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Back to README](https://img.shields.io/badge/%E2%86%90%20Back%20to%20README-gray?style=for-the-badge)](../README.md)
+[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Back to README](https://img.shields.io/badge/%E2%86%90%20Back%20to%20README-gray?style=for-the-badge)](../#readme)
 
 # MapBiomas Venezuela
 
 _**Land Use and Land Cover Classification Module — Collection 4**_
 
-[View script (`03-5-frequency-filter.js`)](../03-5-frequency-filter.js) · [Versión en español](./03-5-frequency-filter.md)
+[View script (`03-5-frequency-filter.js`)](./03-5-frequency-filter.js) · [Versión en español](./es/#readme)
 
 # Advanced Temporal Frequency Filter User Manual
 
@@ -38,7 +38,7 @@ The filter identifies a candidate class for each pixel based on its frequency ac
 - Access to `users/ejvalero/api:src/utils`, `users/mapbiomas/modules:Palettes.js` with the `classification9` palette, and the `projects/mapbiomas-venezuela/assets/DATOS-AUXILIARES/VECTORES/ve-gu-regiones-clasificacion` asset. The script looks up `region_id` by `gridcode`.
 - Access to the Venezuela and Guyana Landsat mosaics for visual inspection. The script merges the `full` season collections and applies a special filter to the Venezuela collection for the configured Andean regions.
 
-The input and output folder is `projects/<user>/assets/MAPBIOMAS-VENEZUELA/LANDSAT/COLLECTION4/GENERAL/classification-ft`. If the input comes from the [Temporal Filter](./03-4-temporal-filter.en.md), set the project, region, and version to match the asset produced at that step.
+The input and output folder is `projects/<user>/assets/MAPBIOMAS-VENEZUELA/LANDSAT/COLLECTION4/GENERAL/classification-ft`. If the input comes from the [Temporal Filter](../03-4-temporal-filter/#readme), set the project, region, and version to match the asset produced at that step.
 
 The script selects the annual bands, assigns `27` to masked observations within the image footprint, and applies the region mask. This normalized `Byte` image is `original` and serves as the reference for the rules and diagnostics.
 
@@ -101,7 +101,7 @@ The **persistent onset** of an anthropic class is the first year of the first ru
 - In the normalized classification, `27` remains an explicit value within the raster's covered area. It contributes neither to the frequency denominator nor to valid opposition. Keep the `no_data` value out of the candidate class lists.
 - Local correction requires valid observations at every position inside the gap. A gap containing `27` is ineligible for local correction.
 - With `protect_no_data = true`, any `27` blocks broad natural stabilization. For an anthropic candidate, the check looks for `27` from persistent onset onward.
-- With `protect_no_data = false`, broad stabilization can correct other valid observations. The write masks still exclude `27`, so that value is preserved. See [Gap Fill](./03-2-gapfill.en.md) for propagating classes into missing observations.
+- With `protect_no_data = false`, broad stabilization can correct other valid observations. The write masks still exclude `27`, so that value is preserved. See [Gap Fill](../03-2-gapfill/#readme) for propagating classes into missing observations.
 
 ## 6. Execution and diagnostics
 

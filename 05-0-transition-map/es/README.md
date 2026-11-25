@@ -1,12 +1,12 @@
-![MapBiomas Venezuela](../mapbiomas-venezuela.png)
+![MapBiomas Venezuela](../../mapbiomas-venezuela.png)
 
-[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Volver al README](https://img.shields.io/badge/%E2%86%90%20Volver%20al%20README-gray?style=for-the-badge)](../README.md)
+[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Volver al README](https://img.shields.io/badge/%E2%86%90%20Volver%20al%20README-gray?style=for-the-badge)](../../#readme)
 
 # MapBiomas Venezuela
 
 _**Land Use and Land Cover Classification Module — Collection 4**_
 
-[Ver script (`05-0-transition-map.js`)](../05-0-transition-map.js) · [English version](./05-0-transition-map.en.md)
+[Ver script (`05-0-transition-map.js`)](../05-0-transition-map.js) · [English version](../#readme)
 
 # Manual de usuario del mapa de transiciones
 
@@ -225,4 +225,4 @@ Las tablas presentan las primeras y las últimas 13 columnas del orden `qa_class
 
 - [Remapear valores](https://developers.google.com/earth-engine/apidocs/ee-image-remap) · [Conteo de valores distintos](https://developers.google.com/earth-engine/apidocs/ee-reducer-countdistinct) · [Contar observaciones en una colección](https://developers.google.com/earth-engine/apidocs/ee-imagecollection-count)
 - [Exportación a assets](https://developers.google.com/earth-engine/apidocs/export-image-toasset)
-- [Exportación de bandas anuales de clasificación](./05-2-download-images.md)
+- [Exportación de bandas anuales de clasificación](../../05-2-download-images/es/#readme)

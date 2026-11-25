@@ -1,12 +1,12 @@
 ![MapBiomas Venezuela](../mapbiomas-venezuela.png)
 
-[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Back to README](https://img.shields.io/badge/%E2%86%90%20Back%20to%20README-gray?style=for-the-badge)](../README.md)
+[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Back to README](https://img.shields.io/badge/%E2%86%90%20Back%20to%20README-gray?style=for-the-badge)](../#readme)
 
 # MapBiomas Venezuela
 
 _**Land Use and Land Cover Classification Module — Collection 4**_
 
-[View script (`04-2-variable-based-remaps-1.js`)](../04-2-variable-based-remaps-1.js) · [Versión en español](./04-2-variable-based-remaps-1.md)
+[View script (`04-2-variable-based-remaps-1.js`)](./04-2-variable-based-remaps-1.js) · [Versión en español](./es/#readme)
 
 # Variable-Based Remapping User Manual
 
@@ -139,4 +139,4 @@ All examples start with class 3. Unless specified, the year is eligible and the 
 
 - [NASADEM in Earth Engine](https://developers.google.com/earth-engine/datasets/catalog/NASA_NASADEM_HGT_001) · [Rasterizing features](https://developers.google.com/earth-engine/apidocs/ee-featurecollection-reducetoimage)
 - [Pixel area](https://developers.google.com/earth-engine/apidocs/ee-image-pixelarea) · [Exporting to assets](https://developers.google.com/earth-engine/apidocs/export-image-toasset)
-- [Reference-Year Remapping guide](./04-3-year-based-remaps.en.md)
+- [Reference-Year Remapping guide](../04-3-year-based-remaps/#readme)

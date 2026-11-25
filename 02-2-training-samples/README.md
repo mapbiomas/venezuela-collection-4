@@ -1,16 +1,16 @@
 ![MapBiomas Venezuela](../mapbiomas-venezuela.png)
 
-[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Back to README](https://img.shields.io/badge/%E2%86%90%20Back%20to%20README-gray?style=for-the-badge)](../README.md)
+[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Back to README](https://img.shields.io/badge/%E2%86%90%20Back%20to%20README-gray?style=for-the-badge)](../#readme)
 
 # MapBiomas Venezuela
 
 _**Land Use and Land Cover Classification Module — Collection 4**_
 
-[View script (`02-2-training-samples.js`)](../02-2-training-samples.js) · [Versión en español](./02-2-training-samples.md)
+[View script (`02-2-training-samples.js`)](./02-2-training-samples.js) · [Versión en español](./es/#readme)
 
 # User Manual: Annual Training Sample Generation
 
-**Script:** [`02-2-training-samples.js`](../02-2-training-samples.js) · **Series:** 1985–2025 (41 years) · **Collection:** 4 · **Version:** 1.0
+**Script:** [`02-2-training-samples.js`](./02-2-training-samples.js) · **Series:** 1985–2025 (41 years) · **Collection:** 4 · **Version:** 1.0
 
 > **Purpose:** Guide the configuration, execution, quality review, and export of the script that generates annual training samples from Landsat mosaics, a thematic reference image, and MapBiomas Venezuela classification regions.
 
@@ -29,14 +29,14 @@ _**Land Use and Land Cover Classification Module — Collection 4**_
 | Item | Description |
 | :--- | :--- |
 | **Title** | User Manual – Annual Training Sample Generation |
-| **Base script** | [`02-2-training-samples.js`](../02-2-training-samples.js) |
+| **Base script** | [`02-2-training-samples.js`](./02-2-training-samples.js) |
 | **Collection** | MapBiomas Venezuela – Collection 4 |
 | **Configured region in script** | `region_id = 92531` |
 | **Output version** | `version = 1` |
 | **Scope** | Configuration, annual reference preparation, area calculation, sample allocation, visualization, export, and quality control. |
 
 > [!NOTE]
-> This manual documents the visible behavior of [`02-2-training-samples.js`](../02-2-training-samples.js). The functions `getRegion()`, `getMapBiomasMosaics()`, `remapWithPolygons()`, `getPointsPerClass()`, `getTrainingSamples()`, and `addPointsToMap()` belong to the external module `users/ejvalero/api:src/utils`; their internal implementation is not part of this file and is not reconstructed here.
+> This manual documents the visible behavior of [`02-2-training-samples.js`](./02-2-training-samples.js). The functions `getRegion()`, `getMapBiomasMosaics()`, `remapWithPolygons()`, `getPointsPerClass()`, `getTrainingSamples()`, and `addPointsToMap()` belong to the external module `users/ejvalero/api:src/utils`; their internal implementation is not part of this file and is not reconstructed here.
 
 ---
 
@@ -74,7 +74,7 @@ _**Land Use and Land Cover Classification Module — Collection 4**_
 
 Supervised classification requires a training dataset that pairs thematic reference labels with spectral bands and derived indices from Landsat mosaics. Across a multi-decade annual time series, sample quality and consistency directly govern the classifier's ability to capture spatial and temporal landscape variability in each region.
 
-The script [`02-2-training-samples.js`](../02-2-training-samples.js) automates annual training sample preparation for 1985–2025. It combines a classification region, Venezuela and Guyana Landsat mosaics, a multiband reference image, remapping rules, and helper functions to compute per-class areas, allocate sample counts, and export one Earth Engine `Table Asset` (`FeatureCollection`) per year.
+The script [`02-2-training-samples.js`](./02-2-training-samples.js) automates annual training sample preparation for 1985–2025. It combines a classification region, Venezuela and Guyana Landsat mosaics, a multiband reference image, remapping rules, and helper functions to compute per-class areas, allocate sample counts, and export one Earth Engine `Table Asset` (`FeatureCollection`) per year.
 
 ### 1.1 What Problem Does It Solve?
 
@@ -373,7 +373,7 @@ The base `classification8` palette (indices 0–62) is extended via `extend_pale
 
 ### 10.1 Preparation
 
-1. Open [`02-2-training-samples.js`](../02-2-training-samples.js) in the Google Earth Engine Code Editor.
+1. Open [`02-2-training-samples.js`](./02-2-training-samples.js) in the Google Earth Engine Code Editor.
 2. Ensure `reference_to_30` is imported or defined.
 3. Verify `user`, `region_id`, and `version`.
 4. Confirm read/write access to `output`, `reference_path`, `regions`, `guyana_mosaics`, and `venezuela_mosaics`.
@@ -415,7 +415,7 @@ The base `classification8` palette (indices 0–62) is extended via `extend_pale
 ### Temporal & Classifier Consistency
 
 - The mosaic always matches the target year; the reference matches the target year except in 2025 (which uses 2024).
-- Ensure exported sample attributes cover the `feature_space` required by [`03-0-classifier.js`](../03-0-classifier.js) (note that `02-2-training-samples.js` includes `tir_median`, whereas `03-0-classifier.js` uses 34 bands without `tir_median`, which remains fully compatible).
+- Ensure exported sample attributes cover the `feature_space` required by [`03-0-classifier.js`](../03-0-classifier/03-0-classifier.js) (note that `02-2-training-samples.js` includes `tir_median`, whereas `03-0-classifier.js` uses 34 bands without `tir_median`, which remains fully compatible).
 
 ---
 
@@ -475,7 +475,7 @@ The base `classification8` palette (indices 0–62) is extended via `extend_pale
 
 ## 16. References and Resources
 
-- **Source script:** [`02-2-training-samples.js`](../02-2-training-samples.js)
+- **Source script:** [`02-2-training-samples.js`](./02-2-training-samples.js)
 - [Google Earth Engine – Code Editor](https://code.earthengine.google.com/)
 - [Google Earth Engine – Client vs. Server](https://developers.google.com/earth-engine/guides/client_server)
 - [Google Earth Engine – `ee.Image.remap`](https://developers.google.com/earth-engine/apidocs/ee-image-remap)

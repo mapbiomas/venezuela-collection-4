@@ -1,12 +1,12 @@
 ![MapBiomas Venezuela](../mapbiomas-venezuela.png)
 
-[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Back to README](https://img.shields.io/badge/%E2%86%90%20Back%20to%20README-gray?style=for-the-badge)](../README.md)
+[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Back to README](https://img.shields.io/badge/%E2%86%90%20Back%20to%20README-gray?style=for-the-badge)](../#readme)
 
 # MapBiomas Venezuela
 
 _**Land Use and Land Cover Classification Module — Collection 4**_
 
-[View script (`04-3-year-based-remaps.js`)](../04-3-year-based-remaps.js) · [Versión en español](./04-3-year-based-remaps.md)
+[View script (`04-3-year-based-remaps.js`)](./04-3-year-based-remaps.js) · [Versión en español](./es/#readme)
 
 # Reference-Year Remapping User Manual
 
@@ -34,7 +34,7 @@ The script uses a base year's classification to identify eligible pixels and rem
 - A classification with `classification_<year>` bands. Check the base-year band, the years to be corrected, and the requested preview years.
 - Access to `users/mapbiomas/modules:Palettes.js`, which provides the `classification8` display palette.
 
-The input and output folder is `projects/<user>/assets/MAPBIOMAS-VENEZUELA/LANDSAT/COLLECTION4/GENERAL/classification-ft`. To use an output from [Variable-Based Remapping](./04-2-variable-based-remaps-1.en.md) or another filtering step, select the region and version actually exported. The script uses that classification's footprint and masks. It declares `regions_path` without loading the vector during processing.
+The input and output folder is `projects/<user>/assets/MAPBIOMAS-VENEZUELA/LANDSAT/COLLECTION4/GENERAL/classification-ft`. To use an output from [Variable-Based Remapping](../04-2-variable-based-remaps-1/#readme) or another filtering step, select the region and version actually exported. The script uses that classification's footprint and masks. It declares `regions_path` without loading the vector during processing.
 
 ## 2. Parameters
 
@@ -109,4 +109,4 @@ The supplied configuration creates a task named `92809-5`. The script applies no
 
 - [Selecting bands](https://developers.google.com/earth-engine/apidocs/ee-image-select) · [Conditional replacement](https://developers.google.com/earth-engine/apidocs/ee-image-where)
 - [Exporting images to assets](https://developers.google.com/earth-engine/apidocs/export-image-toasset)
-- [Transition Map guide](./05-0-transition-map.en.md)
+- [Transition Map guide](../05-0-transition-map/#readme)

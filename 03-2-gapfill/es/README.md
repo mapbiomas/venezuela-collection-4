@@ -1,12 +1,12 @@
-![MapBiomas Venezuela](../mapbiomas-venezuela.png)
+![MapBiomas Venezuela](../../mapbiomas-venezuela.png)
 
-[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Volver al README](https://img.shields.io/badge/%E2%86%90%20Volver%20al%20README-gray?style=for-the-badge)](../README.md)
+[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Volver al README](https://img.shields.io/badge/%E2%86%90%20Volver%20al%20README-gray?style=for-the-badge)](../../#readme)
 
 # MapBiomas Venezuela
 
 _**Land Use and Land Cover Classification Module — Collection 4**_
 
-[Ver script (`03-2-gapfill.js`)](../03-2-gapfill.js) · [English version](./03-2-gapfill.en.md)
+[Ver script (`03-2-gapfill.js`)](../03-2-gapfill.js) · [English version](../#readme)
 
 # Manual de usuario: Relleno temporal de vacíos (Gap Fill)
 
@@ -134,7 +134,7 @@ Personal técnico de MapBiomas Venezuela que participe en la producción, filtra
 El asset de entrada se construye como `projects/<user>/assets/MAPBIOMAS-VENEZUELA/LANDSAT/COLLECTION4/GENERAL/classification-single/<region_id>-<input_version>`. En la configuración revisada, el nombre esperado es `92807-1`.
 
 > [!IMPORTANT]
-> El [clasificador](./03-0-classifier.md) exporta a `classification` por defecto y Gap Fill lee de `classification-single`. Si usa directamente la salida del clasificador, ajuste `input_path` a la carpeta que la contiene y haga coincidir `user`, `region_id` e `input_version` con el asset exportado.
+> El [clasificador](../../03-0-classifier/es/#readme) exporta a `classification` por defecto y Gap Fill lee de `classification-single`. Si usa directamente la salida del clasificador, ajuste `input_path` a la carpeta que la contiene y haga coincidir `user`, `region_id` e `input_version` con el asset exportado.
 
 ```javascript
 var input_name = region_id + '-' + input_version;
@@ -502,7 +502,7 @@ El script utiliza `sample` para todas las bandas. En Earth Engine, `sample` y `m
 - [`Export.image.toAsset`](https://developers.google.com/earth-engine/apidocs/export-image-toasset)
 - [Pyramiding policies / raster assets](https://developers.google.com/earth-engine/guides/image_upload)
 - [MapBiomas Venezuela](https://venezuela.mapbiomas.org/)
-- [Guía del filtro espacial](./03-3-spatial-filter.md)
+- [Guía del filtro espacial](../../03-3-spatial-filter/es/#readme)
 - Cardille, Crowley, Saah & Clinton (eds.), 2024. *Cloud-Based Remote Sensing with Google Earth Engine*. [DOI: 10.1007/978-3-031-26588-4](https://doi.org/10.1007/978-3-031-26588-4)
 
 ---

@@ -1,12 +1,12 @@
-![MapBiomas Venezuela](../mapbiomas-venezuela.png)
+![MapBiomas Venezuela](../../mapbiomas-venezuela.png)
 
-[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Volver al README](https://img.shields.io/badge/%E2%86%90%20Volver%20al%20README-gray?style=for-the-badge)](../README.md)
+[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Volver al README](https://img.shields.io/badge/%E2%86%90%20Volver%20al%20README-gray?style=for-the-badge)](../../#readme)
 
 # MapBiomas Venezuela
 
 _**Land Use and Land Cover Classification Module — Collection 4**_
 
-[Ver script (`04-3-year-based-remaps.js`)](../04-3-year-based-remaps.js) · [English version](./04-3-year-based-remaps.en.md)
+[Ver script (`04-3-year-based-remaps.js`)](../04-3-year-based-remaps.js) · [English version](../#readme)
 
 # Manual de usuario del remapeo por año de referencia
 
@@ -34,7 +34,7 @@ El script usa la clasificación de un año base para localizar píxeles elegible
 - Una clasificación con bandas `classification_<año>`. Confirme la banda del año base, las de los años que desea corregir y las solicitadas para la vista previa.
 - Acceso al módulo `users/mapbiomas/modules:Palettes.js`, que proporciona `classification8` para la visualización.
 
-La carpeta de entrada y salida es `projects/<user>/assets/MAPBIOMAS-VENEZUELA/LANDSAT/COLLECTION4/GENERAL/classification-ft`. Para usar un resultado del [remapeo por variables](./04-2-variable-based-remaps-1.md) u otro paso de filtrado, seleccione la región y la versión efectivamente exportadas. El script usa la huella y las máscaras de esa clasificación. La variable `regions_path` está declarada pero el procesamiento no consulta ese vector.
+La carpeta de entrada y salida es `projects/<user>/assets/MAPBIOMAS-VENEZUELA/LANDSAT/COLLECTION4/GENERAL/classification-ft`. Para usar un resultado del [remapeo por variables](../../04-2-variable-based-remaps-1/es/#readme) u otro paso de filtrado, seleccione la región y la versión efectivamente exportadas. El script usa la huella y las máscaras de esa clasificación. La variable `regions_path` está declarada pero el procesamiento no consulta ese vector.
 
 ## 2. Parámetros
 
@@ -109,4 +109,4 @@ Para la configuración incluida, la tarea se llama `92809-5`. El script no fuerz
 
 - [Selección de bandas](https://developers.google.com/earth-engine/apidocs/ee-image-select) · [Sustitución condicional](https://developers.google.com/earth-engine/apidocs/ee-image-where)
 - [Exportar imágenes a assets](https://developers.google.com/earth-engine/apidocs/export-image-toasset)
-- [Guía del mapa de transiciones](./05-0-transition-map.md)
+- [Guía del mapa de transiciones](../../05-0-transition-map/es/#readme)

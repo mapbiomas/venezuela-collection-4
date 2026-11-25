@@ -1,12 +1,12 @@
-![MapBiomas Venezuela](../mapbiomas-venezuela.png)
+![MapBiomas Venezuela](../../mapbiomas-venezuela.png)
 
-[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Volver al README](https://img.shields.io/badge/%E2%86%90%20Volver%20al%20README-gray?style=for-the-badge)](../README.md)
+[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Volver al README](https://img.shields.io/badge/%E2%86%90%20Volver%20al%20README-gray?style=for-the-badge)](../../#readme)
 
 # MapBiomas Venezuela
 
 _**Land Use and Land Cover Classification Module — Collection 4**_
 
-[Ver script (`03-0-classifier.js`)](../03-0-classifier.js) · [English version](./03-0-classifier.en.md)
+[Ver script (`03-0-classifier.js`)](../03-0-classifier.js) · [English version](../#readme)
 
 # Manual de usuario: Clasificación supervisada anual con Random Forest
 
@@ -67,7 +67,7 @@ _**Land Use and Land Cover Classification Module — Collection 4**_
 ### Convenciones de lectura
 
 - Los nombres de variables, funciones, propiedades y assets se conservan tal como aparecen en el script.
-- **Muestras** se refiere a los Table Assets anuales generados por [`02-2-training-samples.js`](../02-2-training-samples.js).
+- **Muestras** se refiere a los Table Assets anuales generados por [`02-2-training-samples.js`](../../02-2-training-samples/02-2-training-samples.js).
 - **Mosaico** se refiere al mosaico anual con las 34 variables de `feature_space`.
 - El valor `27` es utilizado por el script como clase de ausencia de clasificación / NoData dentro de la región.
 
@@ -351,7 +351,7 @@ Solo los años incluidos en `preview` (`[1990, 1995, 2018, 2020]`) se añaden al
 
 - **Bandas anuales:** Cada banda `classification_<year>` representa la clase asignada por el Random Forest tras aplicar los remapeos espaciales configurados.
 - **Valor `27`:** Indica ausencia de clasificación o NoData; no debe interpretarse como clase temática y debe revisarse antes de la etapa de gap-fill (`03-2-gapfill.js`).
-- **Etapa posterior:** La imagen multibanda exportada sirve de entrada directa para el relleno de vacíos ([`03-2-gapfill.js`](../03-2-gapfill.js)) y el filtrado espacio-temporal.
+- **Etapa posterior:** La imagen multibanda exportada sirve de entrada directa para el relleno de vacíos ([`03-2-gapfill.js`](../../03-2-gapfill/03-2-gapfill.js)) y el filtrado espacio-temporal.
 
 ---
 
@@ -468,7 +468,7 @@ Solo los años incluidos en `preview` (`[1990, 1995, 2018, 2020]`) se añaden al
 | 33 | `tc_greenness_median` | 34 | `tc_wetness_median` |
 
 > [!NOTE]
-> Este `feature_space` contiene 34 variables y excluye `tir_median` (que sí se extrae en [`02-2-training-samples.js`](../02-2-training-samples.js)). Al entrenar, Earth Engine utiliza únicamente las 34 bandas presentes en `bands`.
+> Este `feature_space` contiene 34 variables y excluye `tir_median` (que sí se extrae en [`02-2-training-samples.js`](../../02-2-training-samples/02-2-training-samples.js)). Al entrenar, Earth Engine utiliza únicamente las 34 bandas presentes en `bands`.
 
 ### B.2 Variables de control
 

@@ -1,12 +1,12 @@
-![MapBiomas Venezuela](../mapbiomas-venezuela.png)
+![MapBiomas Venezuela](../../mapbiomas-venezuela.png)
 
-[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Volver al README](https://img.shields.io/badge/%E2%86%90%20Volver%20al%20README-gray?style=for-the-badge)](../README.md)
+[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Volver al README](https://img.shields.io/badge/%E2%86%90%20Volver%20al%20README-gray?style=for-the-badge)](../../#readme)
 
 # MapBiomas Venezuela
 
 _**Land Use and Land Cover Classification Module — Collection 4**_
 
-[Ver script (`03-5-frequency-filter.js`)](../03-5-frequency-filter.js) · [English version](./03-5-frequency-filter.en.md)
+[Ver script (`03-5-frequency-filter.js`)](../03-5-frequency-filter.js) · [English version](../#readme)
 
 # Manual de usuario del filtro temporal avanzado por frecuencia
 
@@ -38,7 +38,7 @@ El filtro identifica una clase candidata por píxel a partir de su frecuencia en
 - Acceso a `users/ejvalero/api:src/utils`, a `users/mapbiomas/modules:Palettes.js` con la paleta `classification9` y al asset `projects/mapbiomas-venezuela/assets/DATOS-AUXILIARES/VECTORES/ve-gu-regiones-clasificacion`. El script busca `region_id` por `gridcode`.
 - Acceso a los mosaicos Landsat de Venezuela y Guyana para inspección visual. Se fusionan las colecciones de temporada `full` y, para regiones andinas configuradas, se aplica el filtro especial a la colección venezolana.
 
-La carpeta de entrada y salida es `projects/<user>/assets/MAPBIOMAS-VENEZUELA/LANDSAT/COLLECTION4/GENERAL/classification-ft`. Si la entrada proviene del [filtro temporal](./03-4-temporal-filter.md), configure el proyecto, la región y la versión según el asset producido en ese paso.
+La carpeta de entrada y salida es `projects/<user>/assets/MAPBIOMAS-VENEZUELA/LANDSAT/COLLECTION4/GENERAL/classification-ft`. Si la entrada proviene del [filtro temporal](../../03-4-temporal-filter/es/#readme), configure el proyecto, la región y la versión según el asset producido en ese paso.
 
 El script selecciona las bandas anuales, asigna `27` a ausencias enmascaradas dentro de la huella de la imagen y aplica la máscara de la región. Esta clasificación normalizada, convertida a `Byte`, es `original` y sirve de referencia para las reglas y diagnósticos.
 
@@ -101,7 +101,7 @@ El **inicio persistente** de una clase antrópica es el primer año de la primer
 - En la clasificación normalizada, `27` se conserva como valor explícito dentro de la cobertura válida del raster. No aporta al denominador de frecuencia ni cuenta como oposición válida. Mantenga el valor de `no_data` fuera de las listas de clases candidatas.
 - La corrección local exige que todas las posiciones del hueco sean válidas. Un hueco que contenga `27` queda fuera de esa corrección.
 - Con `protect_no_data = true`, cualquier `27` impide la estabilización natural amplia. Para una candidata antrópica, se comprueba si hay `27` desde el inicio persistente en adelante.
-- Con `protect_no_data = false`, la estabilización amplia puede corregir otras observaciones válidas. Las máscaras de escritura siguen excluyendo `27`, por lo que ese valor se conserva. Para propagar clases hacia ausencias temporales, consulte la guía de [Gap Fill](./03-2-gapfill.md).
+- Con `protect_no_data = false`, la estabilización amplia puede corregir otras observaciones válidas. Las máscaras de escritura siguen excluyendo `27`, por lo que ese valor se conserva. Para propagar clases hacia ausencias temporales, consulte la guía de [Gap Fill](../../03-2-gapfill/es/#readme).
 
 ## 6. Ejecución y diagnósticos
 

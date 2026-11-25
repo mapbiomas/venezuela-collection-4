@@ -1,16 +1,16 @@
 ![MapBiomas Venezuela](../mapbiomas-venezuela.png)
 
-[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Back to README](https://img.shields.io/badge/%E2%86%90%20Back%20to%20README-gray?style=for-the-badge)](../README.md)
+[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Back to README](https://img.shields.io/badge/%E2%86%90%20Back%20to%20README-gray?style=for-the-badge)](../#readme)
 
 # MapBiomas Venezuela
 
 _**Land Use and Land Cover Classification Module — Collection 4**_
 
-[View script (`03-2-gapfill.js`)](../03-2-gapfill.js) · [Versión en español](./03-2-gapfill.md)
+[View script (`03-2-gapfill.js`)](./03-2-gapfill.js) · [Versión en español](./es/#readme)
 
 # User Manual: Temporal Gap Filling (Gap Fill)
 
-**Script:** [`03-2-gapfill.js`](../03-2-gapfill.js) · **Series:** 1985–2025 (41 years) · **Collection:** 4 · **Version:** 1.0
+**Script:** [`03-2-gapfill.js`](./03-2-gapfill.js) · **Series:** 1985–2025 (41 years) · **Collection:** 4 · **Version:** 1.0
 
 > **Purpose:** Guide the configuration, execution, inspection, quality control, and export of the temporal filter that replaces value 27 with valid classes from neighboring years, using a backward fill followed by a forward fill.
 
@@ -30,7 +30,7 @@ _**Land Use and Land Cover Classification Module — Collection 4**_
 | Item | Description |
 | :--- | :--- |
 | **Title** | User Manual – Temporal Gap Filling (Gap Fill) |
-| **Base script** | [`03-2-gapfill.js`](../03-2-gapfill.js) |
+| **Base script** | [`03-2-gapfill.js`](./03-2-gapfill.js) |
 | **Collection** | MapBiomas Venezuela – Collection 4 |
 | **Input** | `classification-single/<region_id>-<input_version>` |
 | **Output** | `classification-ft/<region_id>-<output_version>` |
@@ -39,7 +39,7 @@ _**Land Use and Land Cover Classification Module — Collection 4**_
 | **Product** | Annual multiband image with `version`, `country`, and `step` metadata |
 
 > [!NOTE]
-> This manual documents the observable behavior of [`03-2-gapfill.js`](../03-2-gapfill.js). The functions `getRegion()` and `getMapBiomasMosaics()` belong to the external module `users/ejvalero/api:src/utils`; their internal implementation is not included in the script and is not reconstructed here.
+> This manual documents the observable behavior of [`03-2-gapfill.js`](./03-2-gapfill.js). The functions `getRegion()` and `getMapBiomasMosaics()` belong to the external module `users/ejvalero/api:src/utils`; their internal implementation is not included in the script and is not reconstructed here.
 
 ---
 
@@ -134,7 +134,7 @@ MapBiomas Venezuela technical personnel involved in production, temporal filteri
 The input asset path is built as `projects/<user>/assets/MAPBIOMAS-VENEZUELA/LANDSAT/COLLECTION4/GENERAL/classification-single/<region_id>-<input_version>`. In the reviewed configuration, the expected name is `92807-1`.
 
 > [!IMPORTANT]
-> The [classifier](./03-0-classifier.en.md) exports to `classification` by default, while Gap Fill reads from `classification-single`. If you use the classifier output directly, point `input_path` to the folder that contains it and match `user`, `region_id`, and `input_version` to the asset you exported.
+> The [classifier](../03-0-classifier/#readme) exports to `classification` by default, while Gap Fill reads from `classification-single`. If you use the classifier output directly, point `input_path` to the folder that contains it and match `user`, `region_id`, and `input_version` to the asset you exported.
 
 ```javascript
 var input_name = region_id + '-' + input_version;
@@ -493,7 +493,7 @@ The script uses `sample` for all bands. In Earth Engine, `sample` and `mode` are
 
 ## 16. References and Resources
 
-- **Source script:** [`03-2-gapfill.js`](../03-2-gapfill.js)
+- **Source script:** [`03-2-gapfill.js`](./03-2-gapfill.js)
 - [Google Earth Engine – Code Editor](https://code.earthengine.google.com/)
 - [`ee.Image.unmask`](https://developers.google.com/earth-engine/apidocs/ee-image-unmask)
 - [`ee.Image.updateMask`](https://developers.google.com/earth-engine/apidocs/ee-image-updatemask)
@@ -502,7 +502,7 @@ The script uses `sample` for all bands. In Earth Engine, `sample` and `mode` are
 - [`Export.image.toAsset`](https://developers.google.com/earth-engine/apidocs/export-image-toasset)
 - [Pyramiding policies / raster assets](https://developers.google.com/earth-engine/guides/image_upload)
 - [MapBiomas Venezuela](https://venezuela.mapbiomas.org/)
-- [Spatial Filter guide](./03-3-spatial-filter.en.md)
+- [Spatial Filter guide](../03-3-spatial-filter/#readme)
 - Cardille, Crowley, Saah & Clinton (eds.), 2024. *Cloud-Based Remote Sensing with Google Earth Engine*. [DOI: 10.1007/978-3-031-26588-4](https://doi.org/10.1007/978-3-031-26588-4)
 
 ---

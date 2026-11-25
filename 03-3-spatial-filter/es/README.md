@@ -1,12 +1,12 @@
-![MapBiomas Venezuela](../mapbiomas-venezuela.png)
+![MapBiomas Venezuela](../../mapbiomas-venezuela.png)
 
-[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Volver al README](https://img.shields.io/badge/%E2%86%90%20Volver%20al%20README-gray?style=for-the-badge)](../README.md)
+[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Volver al README](https://img.shields.io/badge/%E2%86%90%20Volver%20al%20README-gray?style=for-the-badge)](../../#readme)
 
 # MapBiomas Venezuela
 
 _**Land Use and Land Cover Classification Module — Collection 4**_
 
-[Ver script (`03-3-spatial-filter.js`)](../03-3-spatial-filter.js) · [English version](./03-3-spatial-filter.en.md)
+[Ver script (`03-3-spatial-filter.js`)](../03-3-spatial-filter.js) · [English version](../#readme)
 
 # Manual de usuario del filtro espacial
 
@@ -33,7 +33,7 @@ El filtro reduce el ruido espacial de la clasificación anual. Selecciona píxel
 ## 1. Requisitos y entradas
 
 - Acceso al [Code Editor de Google Earth Engine](https://code.earthengine.google.com/), al asset de clasificación regional y al proyecto definido en `user`. La carpeta de salida debe existir y admitir escritura.
-- La imagen de entrada debe incluir las bandas `classification_1985` a `classification_2025` para la serie completa. Con los valores del script puede corresponder a la salida del [Gap Fill](./03-2-gapfill.md).
+- La imagen de entrada debe incluir las bandas `classification_1985` a `classification_2025` para la serie completa. Con los valores del script puede corresponder a la salida del [Gap Fill](../../03-2-gapfill/es/#readme).
 - Acceso al módulo `users/ejvalero/api:src/utils` y a `users/mapbiomas/modules:Palettes.js`, con la paleta `classification9`.
 - Acceso al asset de regiones `projects/mapbiomas-venezuela/assets/DATOS-AUXILIARES/VECTORES/ve-gu-regiones-clasificacion` y a los mosaicos Landsat usados en la vista previa.
 
@@ -146,4 +146,4 @@ En esta ventana 3 × 3, la moda local es 3. El píxel central pasa de 21 a 3 si 
 
 - [Filtro de moda focal](https://developers.google.com/earth-engine/apidocs/ee-image-focalmode) · [Superposición con `blend()`](https://developers.google.com/earth-engine/apidocs/ee-image-blend) · [Máscaras de imagen](https://developers.google.com/earth-engine/apidocs/ee-image-mask)
 - [Exportación a assets](https://developers.google.com/earth-engine/apidocs/export-image-toasset) · [Política de piramidación](https://developers.google.com/earth-engine/guides/image_upload)
-- [Siguiente guía del flujo: filtro temporal](./03-4-temporal-filter.md)
+- [Siguiente guía del flujo: filtro temporal](../../03-4-temporal-filter/es/#readme)

@@ -1,12 +1,12 @@
-![MapBiomas Venezuela](../mapbiomas-venezuela.png)
+![MapBiomas Venezuela](../../mapbiomas-venezuela.png)
 
-[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Volver al README](https://img.shields.io/badge/%E2%86%90%20Volver%20al%20README-gray?style=for-the-badge)](../README.md)
+[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Volver al README](https://img.shields.io/badge/%E2%86%90%20Volver%20al%20README-gray?style=for-the-badge)](../../#readme)
 
 # MapBiomas Venezuela
 
 _**Land Use and Land Cover Classification Module — Collection 4**_
 
-[Ver script (`03-4-temporal-filter.js`)](../03-4-temporal-filter.js) · [English version](./03-4-temporal-filter.en.md)
+[Ver script (`03-4-temporal-filter.js`)](../03-4-temporal-filter.js) · [English version](../#readme)
 
 # Manual de usuario del filtro temporal
 
@@ -37,7 +37,7 @@ El filtro corrige interrupciones de uno a tres años dentro de una trayectoria p
 - Acceso a `users/ejvalero/api:src/utils`, al módulo `users/mapbiomas/modules:Palettes.js` con la paleta `classification9` y al asset `projects/mapbiomas-venezuela/assets/DATOS-AUXILIARES/VECTORES/ve-gu-regiones-clasificacion`, que identifica las regiones por `gridcode`.
 - Acceso a los mosaicos Landsat de Venezuela y Guyana. Para la vista previa, el script combina la temporada `full` y muestra `swir1_median`, `nir_median` y `red_median` con la máscara regional. En las regiones andinas configuradas aplica el filtro especial a la colección venezolana. Las reglas temporales se calculan a partir de la clasificación.
 
-La entrada y la salida están en `projects/<user>/assets/MAPBIOMAS-VENEZUELA/LANDSAT/COLLECTION4/GENERAL/classification-ft`. Si quiere usar el resultado del [filtro espacial](./03-3-spatial-filter.md), configure `input_version` según la versión que realmente exportó y elija un `output_version` distinto y disponible. Los valores de ejemplo de ambos scripts apuntan al mismo nombre de salida.
+La entrada y la salida están en `projects/<user>/assets/MAPBIOMAS-VENEZUELA/LANDSAT/COLLECTION4/GENERAL/classification-ft`. Si quiere usar el resultado del [filtro espacial](../../03-3-spatial-filter/es/#readme), configure `input_version` según la versión que realmente exportó y elija un `output_version` distinto y disponible. Los valores de ejemplo de ambos scripts apuntan al mismo nombre de salida.
 
 ## 2. Parámetros
 
@@ -73,7 +73,7 @@ Cada regla recorre las clases `[6, 9, 11, 13, 21, 24, 30, 3, 12, 33]` en ese ord
 Para una clase y una regla interna dadas, los años se evalúan en paralelo sobre la misma imagen de entrada de esa pasada. `pad_image()` agrega tres bandas auxiliares con valor `9999` antes y después de la serie para resolver las selecciones fuera de rango. Las bandas auxiliares quedan fuera de la salida. Las reglas de los extremos modifican directamente la primera o la última banda.
 
 > [!NOTE]
-> Las ventanas sustituyen valores de clase que cumplen un patrón. El código no aplica la máscara NoData de [Gap Fill](./03-2-gapfill.md) ni llama a `unmask()`. Un valor válido de banda igual a `27` puede coincidir con una posición `X`. Un píxel ya enmascarado no se rellena mediante `where()`.
+> Las ventanas sustituyen valores de clase que cumplen un patrón. El código no aplica la máscara NoData de [Gap Fill](../../03-2-gapfill/es/#readme) ni llama a `unmask()`. Un valor válido de banda igual a `27` puede coincidir con una posición `X`. Un píxel ya enmascarado no se rellena mediante `where()`.
 
 ## 4. Restauración de años y clases
 
@@ -144,4 +144,4 @@ La tarea exporta la clasificación final. Para auditar diferencias o áreas por 
 
 - [Sustitución condicional con `where()`](https://developers.google.com/earth-engine/apidocs/ee-image-where) · [Sobrescritura de bandas con `addBands()`](https://developers.google.com/earth-engine/apidocs/ee-image-addbands) · [Superposición con `blend()`](https://developers.google.com/earth-engine/apidocs/ee-image-blend)
 - [Exportación a assets](https://developers.google.com/earth-engine/apidocs/export-image-toasset) · [Política de piramidación](https://developers.google.com/earth-engine/guides/image_upload)
-- [Siguiente guía del flujo: filtro de frecuencia](./03-5-frequency-filter.md)
+- [Siguiente guía del flujo: filtro de frecuencia](../../03-5-frequency-filter/es/#readme)

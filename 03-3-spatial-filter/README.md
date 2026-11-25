@@ -1,12 +1,12 @@
 ![MapBiomas Venezuela](../mapbiomas-venezuela.png)
 
-[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Back to README](https://img.shields.io/badge/%E2%86%90%20Back%20to%20README-gray?style=for-the-badge)](../README.md)
+[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Back to README](https://img.shields.io/badge/%E2%86%90%20Back%20to%20README-gray?style=for-the-badge)](../#readme)
 
 # MapBiomas Venezuela
 
 _**Land Use and Land Cover Classification Module — Collection 4**_
 
-[View script (`03-3-spatial-filter.js`)](../03-3-spatial-filter.js) · [Versión en español](./03-3-spatial-filter.md)
+[View script (`03-3-spatial-filter.js`)](./03-3-spatial-filter.js) · [Versión en español](./es/#readme)
 
 # Spatial Filter User Manual
 
@@ -33,7 +33,7 @@ This filter reduces spatial noise in the annual classification. It selects pixel
 ## 1. Requirements and inputs
 
 - Access to the [Google Earth Engine Code Editor](https://code.earthengine.google.com/), the regional classification asset, and the project set in `user`. The output folder must exist and be writable.
-- For the complete series, the input image must include the `classification_1985` through `classification_2025` bands. With the script defaults, it can be the output of [Gap Fill](./03-2-gapfill.en.md).
+- For the complete series, the input image must include the `classification_1985` through `classification_2025` bands. With the script defaults, it can be the output of [Gap Fill](../03-2-gapfill/#readme).
 - Access to `users/ejvalero/api:src/utils` and `users/mapbiomas/modules:Palettes.js`, which provides the `classification9` palette.
 - Access to the region asset `projects/mapbiomas-venezuela/assets/DATOS-AUXILIARES/VECTORES/ve-gu-regiones-clasificacion` and the Landsat mosaics used for the preview.
 
@@ -146,4 +146,4 @@ In this 3 × 3 window, the focal mode is 3. The center pixel changes from 21 to 
 
 - [Focal mode filter](https://developers.google.com/earth-engine/apidocs/ee-image-focalmode) · [Overlay with `blend()`](https://developers.google.com/earth-engine/apidocs/ee-image-blend) · [Image masks](https://developers.google.com/earth-engine/apidocs/ee-image-mask)
 - [Exporting to assets](https://developers.google.com/earth-engine/apidocs/export-image-toasset) · [Pyramiding policy](https://developers.google.com/earth-engine/guides/image_upload)
-- [Next workflow guide: Temporal Filter](./03-4-temporal-filter.en.md)
+- [Next workflow guide: Temporal Filter](../03-4-temporal-filter/#readme)

@@ -1,12 +1,12 @@
-![MapBiomas Venezuela](../mapbiomas-venezuela.png)
+![MapBiomas Venezuela](../../mapbiomas-venezuela.png)
 
-[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Volver al README](https://img.shields.io/badge/%E2%86%90%20Volver%20al%20README-gray?style=for-the-badge)](../README.md)
+[![Back to Venezuela All Initiatives](https://img.shields.io/badge/←%20Venezuela%20All%20Initiatives-gray?style=for-the-badge)](https://github.com/mapbiomas/venezuela-all-initiatives) [![Volver al README](https://img.shields.io/badge/%E2%86%90%20Volver%20al%20README-gray?style=for-the-badge)](../../#readme)
 
 # MapBiomas Venezuela
 
 _**Land Use and Land Cover Classification Module — Collection 4**_
 
-[Ver script (`04-2-variable-based-remaps-1.js`)](../04-2-variable-based-remaps-1.js) · [English version](./04-2-variable-based-remaps-1.en.md)
+[Ver script (`04-2-variable-based-remaps-1.js`)](../04-2-variable-based-remaps-1.js) · [English version](../#readme)
 
 # Manual de usuario del remapeo por variables auxiliares
 
@@ -139,4 +139,4 @@ En todos los ejemplos la clase de entrada es 3. Salvo donde se indica, el año e
 
 - [NASADEM en Earth Engine](https://developers.google.com/earth-engine/datasets/catalog/NASA_NASADEM_HGT_001) · [Rasterización de entidades](https://developers.google.com/earth-engine/apidocs/ee-featurecollection-reducetoimage)
 - [Área de píxel](https://developers.google.com/earth-engine/apidocs/ee-image-pixelarea) · [Exportación a assets](https://developers.google.com/earth-engine/apidocs/export-image-toasset)
-- [Guía del remapeo por año de referencia](./04-3-year-based-remaps.md)
+- [Guía del remapeo por año de referencia](../../04-3-year-based-remaps/es/#readme)
